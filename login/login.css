@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+/* ------------------HEADER----------------*/
+nav{
+
+    display: flex;
+    background: #30343F;
+    height: 15vh;
+   justify-content: space-between;
+}
+nav .img-nav{
+    width: 50%;
+    padding:27px 0% 1% 8%;
+}
+nav .img-nav img{
+    width: 250px;
+    position: relative;
+}
+ .container-menu{
+  display: flex;
+  justify-content: right;
+  width: 50%;
+  text-align: center;
+  padding: 39px 4% 0% 0%;
+}
+.container-menu a{
+    padding-left: 9% ;
+    justify-content: center;
+    font-size: 0.9em;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.container-menu a:hover{
+    text-decoration:underline 2px white;
+    text-underline-offset: 5px;
+}
+
+main{
+    height: 45vh;
+    text-align: center; 
+    margin-top: 20px;
+}
+main h2{
+    margin-bottom: 12px;
+    color: #1F1F1F;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+main form label{
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+main form input{
+    border: none;
+    margin-left: 18px;
+    font-weight: 300;
+    outline: none;
+    border-bottom: 1px solid #FF3333;
+}
+main form .uno{
+    margin-left: 62px;
+}
+main form .container-btn{
+    margin: 20px 0 20px 0;
+    font-size: 14px;
+    color: #1F1F1F;
+    display: flex;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+main form .container-btn button{
+    margin-right:1.5% ;
+    background: #FF3333;
+    border: none;
+    color: white;
+    width: 85px;
+    height: 32px;
+    cursor: pointer;
+}
+main form .container-btn button:hover{
+    background: rgb(255, 38, 0);
+}
+
+main form .container-btn input{
+    margin-right: 9px;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+main form .container-btn span{
+    margin-top: 8px;
+    font-weight: 300;
+}
+
+main > a{
+    text-decoration: none;
+    color: #1D84B5;
+}
+main > a:hover{
+    text-decoration: underline #1D84B5;
+}
+
+footer{
+    font-family: 'Raleway', sans-serif;
+    height: 43vh;
+    background:#30343F ;
+    font-family: 'Raleway', sans-serif;
+}
+footer .container{
+    display: flex;
+    width: 100%;
+}
+footer .container-footer{
+    width: 50%;
+    display: flex;
+    padding: 4% 0% 60px 8%; 
+    flex-direction: column;
+}
+footer .container-footer a{
+    color: white;
+    text-decoration: none;
+    display: block;
+   padding-bottom: 3%;
+}
+footer .container-img-footer{
+    display: flex;
+    justify-content: right;
+    padding: 7% 6% 0% 0%;
+    width: 100%;
+}
+footer .container-img-footer a img{
+    width: 90px;
+}
+.copy{
+display: block;
+color: aliceblue;
+text-align: center;
+position: relative;
+background-color:rgb(49, 49, 60) ;
+padding-bottom: 1%;
+}
+
+@media(max-width:450px){
+    nav .img-nav img{
+        width: 180px;
+    }
+    .container-menu a{
+    font-size: 13px;
+    }
+    main h2{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+/*----------validacion----------*/
+.inputsucces input{
+    border-color: rgb(0, 255, 0);
+}
+.inputerror input{
+    border-color: red;
+    margin-bottom: 0.7%;
+}
+.parent small{
+     position: absolute;
+     visibility:hidden;
+}
+.inputerror small{
+    visibility: visible;
+    color: red;
+}
+main form .parent .input{
+    display: block;
+}
