@@ -1,11 +1,12 @@
 
+let nombre= document.getElementById("name");
+let descripcion= document.getElementById("descripcion");
+let sku= document.getElementById("sku");
+let precio= document.getElementById("precio");
+let stock= document.getElementById("stock");
+let descuento= document.getElementById("descuento");
 let form = document.getElementById("form");
-let usuario= document.getElementById("text");
-let email= document.getElementById("email");
-let edad= document.getElementById("edad");
-let nacimiento = document.getElementById("fechanac");
-let area = document.getElementById("area");
-
+let cuota= document.getElementById("cuotas");
 
 form.addEventListener("submit", e =>{
     e.preventDefault(),
@@ -13,47 +14,61 @@ form.addEventListener("submit", e =>{
 });
 
 function checkedinput(){ 
-    let usuarioval= usuario.value.trim();
-    let emailval= email.value.trim();
-    let edadval= edad.value.trim();
-    let nacimientoval= nacimiento.value.trim();
-    let areaval= area.value.trim();
-    if(usuarioval===""){
-        setError(usuario,"El campo nombre no puede quedar vacio");
-    }else{ 
-        succes(usuario);  
-    }  
-    if(emailval===""){
-        setError(email,"El campo email no puede quedar vacio");
+    let nuevoname= nombre.value.trim();
+    let nuevadescripcion= descripcion.value.trim();
+    let nuevosku= sku.value.trim();
+    let nuevoprecio= precio.value.trim();
+    let nuevostock= stock.value.trim();
+    let nuevodescuento= descuento.value.trim();
+    let nuevacuota= cuota.checked;
+
+    if(nuevoname===""){
+        setError(nombre,"El campo nombre no puede quedar vacio");
     }else{
-        succes(email);
+        succes(nombre);
     }
-    if(edadval===""){
-        setError(edad,"El campo edad no puede quedar vacio")
+    if(nuevadescripcion===""){
+        setError(descripcion,"Debe ingresar una descripción");
     }else{
-        succes(edad);
+        succes(descripcion);
     }
-    if(nacimientoval===""){
-        setError(nacimiento,"El campo fecha de nacimiento no puede quedar vacio")
+    if(nuevosku===""){
+        setError(sku,"Ingrese un sku");
     }else{
-        succes(nacimiento);
+        succes(sku);
     }
-    if(areaval===""){
-        setError(area,"El campo mensaje no puede quedar vacio")
+    if(nuevoprecio===""){
+        setError(precio,"Ingrese el precio");
     }else{
-        succes(area);
+        succes(precio);
     }
-}
-function setError(input, mensaje){
- let elemenpadre= input.parentElement;
- let small= elemenpadre.querySelector("small");
- elemenpadre.className="inputerror";
- small.innerText= mensaje;
-}
-function succes(input){
- let elemenpadre= input.parentElement;
- let small= elemenpadre.querySelector("small");
- elemenpadre.className="inputsucces";
- small.innerText="";
+    if(nuevostock===""){
+        setError(stock,"Ingrese el stock");
+    }else{
+        succes(stock);
+    }
+    if(nuevodescuento===""){
+        setError(descuento,"Ingrese el descuento");
+    }else{
+        succes(descuento);
+    }
+    if(nuevacuota){
+        setError(cuota," ingrese algo");
+    }else{
+        succes(cuota);
+    }
 }
 
+function setError(input, mensaje){              
+    let elemenpadre= input.parentElement;      
+    let small= elemenpadre.querySelector("small"); 
+    elemenpadre.className="inputerror";  
+    small.innerText= mensaje;
+   }
+   function succes(input){
+    let elemenpadre= input.parentElement;
+    let small= elemenpadre.querySelector("small");
+    elemenpadre.className="inputsucces";
+    small.innerText="";
+   }
+   

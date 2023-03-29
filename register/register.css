@@ -127,7 +127,6 @@ main form .btn .parent> span a:hover{
     text-decoration: underline 1px solid #1D84B5;
 }
 
-
 footer{
     height: 43vh;
     background:#30343F ;
@@ -215,10 +214,9 @@ padding-bottom: 1%;
 
 
 
-
 /*----------validación-----------*/
 .inputsucces span a{
-    text-decoration: none;    
+    text-decoration: none;    /*esto es para que cuando tenga la clase inputerror los elementos no cambien su estilo*/
     color: #1D84B5;
     margin-left:4px;margin-top: 10%;
 }
@@ -237,14 +235,16 @@ padding-bottom: 1%;
     visibility: visible;
     color: red;
 }
-main form .parent .input{  
+main form .parent .input{   /*esto es para que el small vaya abajo, el .input es el elemento padre*/
     display: block;
 }
  .inputerror span a{
-    text-decoration: none;     
+    text-decoration: none;     /*esto es para que cuando tenga la clase inputerror los elementos no cambien su estilo*/
     color: #1D84B5;
     margin-left:4px;margin-top: 10%;
 }
 .inputerror span a:hover{
     text-decoration: underline #1D84B5 ;
 }
+
+

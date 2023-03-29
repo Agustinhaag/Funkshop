@@ -150,25 +150,23 @@ section .container button:hover{
     color: rgb(255, 255, 255);
 }
 section .container-section-img{
-    justify-content: right;
+    justify-content: center;
     display: flex;
    width: 100%;
-   padding: 0% 8% 0% 0%;
 }
 section .container-section-img a img{
-  min-width: 300px;
+  min-width: 270px;
     width: 350px;
     height: 400px;
     min-height: 200px;
     padding-top: 11%;
 }
 
-section .container-section-img2{
-    justify-content: right;
-    display: flex;
-   width: 100%;
-   padding: 0% 8% 0% 0%;
+section .container .border2{
+    width: 97%;
+    border-bottom: 2px solid #FF3333;
 }
+
 .catalogo{
     height: 80vh;
     padding: 0 4% 4% 8%;
@@ -190,6 +188,18 @@ section .container-section-img2{
     background: #ffffff;
     margin-right: 2%;
      text-align: center;
+}
+.catalogo .container-carrusel .carrusel .cartel{
+position: relative;
+}
+.catalogo .container-carrusel .carrusel .cartel p{
+    position: absolute;
+    background: #FF3333;
+    color: white;
+    top: 0;
+    right: 0;
+    font-size: 11px;
+    padding: 5px 15px;
 }
 .catalogo .container-carrusel .carrusel img{
     width: 70%;
@@ -230,7 +240,6 @@ section .container-section-img2{
     right: 4%;
 }
 
-
 /*-------------------footer-------------------*/
 footer{
     height: 43vh;
@@ -269,7 +278,6 @@ position: relative;
 background-color:rgb(49, 49, 60) ;
 padding-bottom: 1%;
 }
-
 
 @media(max-width:768px) {
     .mostrar, .ocultar{
@@ -321,7 +329,7 @@ padding-bottom: 1%;
         height: 100%;
     }
     .section{
-        display: block;
+        display: flex;
         flex-direction: column;
     }
     section .container-section-img{
@@ -329,8 +337,14 @@ padding-bottom: 1%;
         text-align: center;
     }
     section .container-section-img a img{
-        width: 60px;
-        height: 300px;
+        width: 190px;
+        height: 320px;
+    } 
+    section .container-section-img2{
+        order: 2;
+    }
+    section .container .border2{
+        width: 100%;
     }
     .catalogo{
         margin-top: 6%;
@@ -359,3 +373,5 @@ padding-bottom: 1%;
         margin-top: 10%;
     }
 }
+
+

@@ -49,7 +49,7 @@ nav .img-nav img{
     text-underline-offset: 5px;
 }
 main{
-    height: 88vh;
+    height: 70%;
     display: block;
     width: 100%;
 }
@@ -87,6 +87,7 @@ margin-right: 2px;
 main .contenedor-input input{
     border: none;
     width: 16.5%;
+    outline: none;
     border-bottom:  1px solid #FF3333;
 }
 main .text-area{
@@ -94,21 +95,24 @@ main .text-area{
 }
 main .text-area textarea{
     width: 71%;
+    outline: none;
 }
 main .contenedor-grupo{
 margin-bottom: 3%;
 display: flex;
 width: 100%;
-font-weight: 600;
+font-weight: 300;
 }
 main .contenedor-grupo .grupo2 span{
     margin-right: 3px;
+    font-weight: 600;
 }
 main .contenedor-grupo .grupo2 input{
     border: none;
     border-bottom:  1px solid #FF3333;
-    width: 50%;
+    width: 49%;
     margin-right: 24%;
+    outline: none;
 }
 main .contenedor-grupo .grupo2 input::placeholder, main .contenedor-span .grupo3 .descuento{
     text-align: center;
@@ -120,14 +124,18 @@ main .contenedor-span{
   display: flex;
   width: 80%;
   margin-bottom:3%;
-  font-weight: 600;
+  font-weight: 300;
 }
 main .contenedor-span .grupo3{
     width: 20%;
 }
+main .contenedor-span span{
+    font-weight: 600;
+}
 main .contenedor-span .grupo3 .descuento{
     width: 19%;
     border: none;
+    outline: none;
     border-bottom:  1px solid #FF3333;
 }
 main .contenedor-span .grupo4 {
@@ -136,6 +144,8 @@ main .contenedor-span .grupo4 {
 main .contenedor-span .grupo4 select{
 height: 140%;
 width: 60%;
+outline: none;
+max-height: 35px;
 }
 main .contenedor-img{
     margin-bottom: 2.5%;
@@ -157,6 +167,7 @@ main .btn button:hover{
 
 
 footer{
+    margin-top: 1.5%;
     height: 43vh;
     background:#30343F ;
     font-family: 'Raleway', sans-serif;
@@ -202,4 +213,22 @@ main{
 .dimensiones{
     margin: 0 0 0 10%;
 }
+}
+
+
+
+/* ------validacion---------- */
+.inputerror select{
+    margin-bottom: 0.7%;
+}
+.parent small{
+     position: absolute;
+     visibility:hidden;
+}
+.inputerror small{
+    visibility: visible;
+    color: red;
+}
+main form .parent .input{   
+    display: block;
 }

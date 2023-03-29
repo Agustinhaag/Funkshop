@@ -143,6 +143,18 @@ main .form form .container-check .check label input{
     margin-right: 2%;
      text-align: center;
 }
+.catalogo .container-carrusel .carrusel .cartel{
+    position: relative;
+    }
+    .catalogo .container-carrusel .carrusel .cartel p{
+        position: absolute;
+        background: #FF3333;
+        color: white;
+        top: 0;
+        right: 0;
+        font-size: 9px;
+        padding: 4px 11px;
+    }
 .catalogo .container-carrusel .carrusel img{
     width: 70%;
 }

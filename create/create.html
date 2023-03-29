@@ -18,7 +18,7 @@
     </header>
     <main class="dimensiones">
         <h1>CREAR NUEVO ITEM</h1>
-     <form action="">   
+     <form id="form" action="">   
         <div class="contenedor">
             <div class="grupo1">
                 <span>Categoría:</span>
@@ -38,38 +38,59 @@
             </div>
         </div>
         <div class="contenedor-input">
+          <div class="parent">  
             <span>Nombre del producto:</span>
-            <input type="text" placeholder="Kakashi Hatake Shippuden Saga">
+            <input type="text" id="name" placeholder="Kakashi Hatake Shippuden Saga">
+            <div class="input"></div><small></small>
+          </div>
         </div>
         <div class="text-area">
-            <textarea name="" placeholder="Descripción del producto" id="" cols="30" rows="10"></textarea>
+          <div class="parent">
+            <textarea name="" placeholder="Descripción del producto" id="descripcion" cols="30" rows="10"></textarea>
+            <div class="input"></div> <small></small>
+          </div>  
         </div>
         <div class="contenedor-grupo">
             <div class="grupo2">
+              <div class="parent">  
                 <span>SKU:</span>
-                <input placeholder="SSK111AB001" type="text">
+                <input id="sku" placeholder="SSK111AB001" type="text">
+                <div class="input"></div> <small></small>
+              </div>
             </div>
             <div class="grupo2">
+              <div class="parent">  
                 <span>Precio:</span>
-                <input placeholder="$ 0.000,00" type="text">
+                <input id="precio" placeholder="$ 0.000,00" type="text">
+                <div class="input"></div> <small></small>
+              </div>
             </div>
             <div class="grupo2">
+              <div class="parent">  
                 <span>Stock:</span>
-                <input class="stock" placeholder="0" type="text">
+                <input id="stock" class="stock" placeholder="0" type="text">
+                <div class="input"></div> <small></small>
+              </div>
             </div>
         </div>
         <div class="contenedor-span">
             <div class="grupo3">
+              <div class="parent">
                 <span>Descuento:</span>
-                <input class="descuento" placeholder="0%" type="text">
+                <input id="descuento" class="descuento" placeholder="0%" type="text">
+                <div class="input"></div> <small></small>
+              </div>
             </div>
             <div class="grupo4">
+              <div class="parent">
                 <span>Cuotas:</span>
-                <select name="" id="">
+                <select name="" id="cuotas">
                     <option value=""></option>
                     <option value="">3 Cuotas sin interés</option>
                     <option value="">6 Cuotas sin interés</option>
                 </select>
+              <div class="input"></div> <small></small>
+              </div>
             </div>
         </div>    
         <div class="contenedor-img">
@@ -78,7 +99,7 @@
         </div>
         <div class="btn">
             <button>Agregar Producto</button>
-            <button>Limpiar</button>
+            <button type="reset">Limpiar</button>
         </div>
     </form>
     </main>

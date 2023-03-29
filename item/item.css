@@ -169,6 +169,18 @@ margin: 65px 0 0 0;
     margin-right: 2%;
      text-align: center;
 }
+.catalogo .container-carrusel .carrusel .cartel{
+    position: relative;
+    }
+    .catalogo .container-carrusel .carrusel .cartel p{
+        position: absolute;
+        background: #FF3333;
+        color: white;
+        top: 0;
+        right: 0;
+        font-size: 10px;
+        padding: 5px 13px;
+    }
 .catalogo .container-carrusel .carrusel img{
     width: 70%;
 }
