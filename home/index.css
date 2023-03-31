@@ -127,7 +127,7 @@ section .container .container-text h2{
 section .container .container-text p{
     font-size: 1em;
     font-family: 'Raleway', sans-serif;
-    padding-bottom: 3%;
+    padding:2% 0 3% 0;
     color: #4F4F4F;
     width: 65%;
 }
@@ -331,6 +331,10 @@ padding-bottom: 1%;
     .section{
         display: flex;
         flex-direction: column;
+    }
+    section .container .container-text p{
+        width: 100%;
+        padding: 6px 0;
     }
     section .container-section-img{
         display: block;

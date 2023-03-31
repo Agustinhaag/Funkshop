@@ -145,6 +145,10 @@ main .contenedor-span .grupo3 .descuento{
 }
 main .contenedor-span .grupo4 {
     width: 70%;
+    font-weight: 300;
+}
+main .contenedor-span .grupo4 span{
+    font-weight: 600;
 }
 main .contenedor-span .grupo4 select{
 height: 140%;
@@ -245,10 +249,7 @@ padding-bottom: 1%;
 }
 
 /*--------------validacion--------------*/
-.inputerror input{
-    border-color: red;
-    margin-bottom: 0.7%;
-}
+
 .parent small{
      position: absolute;
      visibility:hidden;
@@ -259,4 +260,11 @@ padding-bottom: 1%;
 }
 main form .parent .input{   
     display: block;
+}
+.inputerror{
+    width: 100%;
+}
+.select small{
+    position: absolute;
+     visibility:hidden;
 }
