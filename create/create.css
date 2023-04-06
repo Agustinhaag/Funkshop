@@ -73,8 +73,12 @@ main .contenedor .grupo1 span{
 font-weight: 600;
 margin-right: 20px;
 }
+main .contenedor .grupo1 .parent{
+    width: 100%;
+}
 main .contenedor .grupo1 select{
-    width: 65%;
+    width: 63%;
+    outline: none;
     height: 140%;
 }
 main .contenedor-input{
@@ -218,9 +222,6 @@ main{
 
 
 /* ------validacion---------- */
-.inputerror select{
-    margin-bottom: 0.7%;
-}
 .parent small{
      position: absolute;
      visibility:hidden;
@@ -229,6 +230,13 @@ main{
     visibility: visible;
     color: red;
 }
+.inputerror{
+    width: 100%;
+}
 main form .parent .input{   
     display: block;
+}
+.select small{
+    position: absolute;
+     visibility:hidden;
 }

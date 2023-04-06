@@ -247,11 +247,7 @@ padding-bottom: 1%;
         color: white;  
         font-size: 25px; 
     }
-    .mostrar{
-        margin-right: 2%;
-        display: flex;
-        align-items: center;
-    }
+  
     nav .img-nav img{
         width: 170px;
     }
@@ -262,15 +258,23 @@ padding-bottom: 1%;
         background: #30343F;
         top: 0;     
         display: block;
-        right: -100%;   
+        right:0;   
+        bottom: 0;
         text-align: center;
         padding: 100px 0;
         z-index: 100; 
-        transition: 1s;
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
     }
     .container-menu a{
         display: block;
         padding: 7% 0 7% 0;
+    }
+    .container-menu.visible{
+        visibility: visible;
+        opacity: 1;
+        transition: 0.6s;
     }
     .container-menu .icon{
         display: none;
@@ -279,11 +283,14 @@ padding-bottom: 1%;
         position: absolute;
         right: 40px;
         top: 40px;
+        font-size: 35px;
     }
-    #check:checked ~ .container-menu{ 
-     right: 0;
+    .mostrar{
+        position: relative;
+        right: 10px;
+        top: 20px;
     }
-   
+
     .section{
          height: 100%;
         display: block;

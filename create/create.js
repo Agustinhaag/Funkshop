@@ -7,6 +7,8 @@ let stock= document.getElementById("stock");
 let descuento= document.getElementById("descuento");
 let form = document.getElementById("form");
 let cuota= document.getElementById("cuotas");
+let licencia =document.getElementById("licencia");
+let categoria =document.getElementById("categoria");
 
 form.addEventListener("submit", e =>{
     e.preventDefault(),
@@ -20,7 +22,6 @@ function checkedinput(){
     let nuevoprecio= precio.value.trim();
     let nuevostock= stock.value.trim();
     let nuevodescuento= descuento.value.trim();
-    let nuevacuota= cuota.checked;
 
     if(nuevoname===""){
         setError(nombre,"El campo nombre no puede quedar vacio");
@@ -52,10 +53,20 @@ function checkedinput(){
     }else{
         succes(descuento);
     }
-    if(nuevacuota){
-        setError(cuota," ingrese algo");
+    if (cuota.selectedIndex === 0) {
+       setError(cuota, "Debe seleccionar una opcion");
+      }else{
+     select(cuota);
+    }
+    if (licencia.selectedIndex === 0) {
+        setError(licencia, "Debe seleccionar una licencia");
     }else{
-        succes(cuota);
+      select(licencia);
+    }
+    if (categoria.selectedIndex === 0) {
+        setError(categoria, "Debe seleccionar una categoría");
+    }else{
+      select(categoria);
     }
 }
 
@@ -68,7 +79,12 @@ function setError(input, mensaje){
    function succes(input){
     let elemenpadre= input.parentElement;
     let small= elemenpadre.querySelector("small");
-    elemenpadre.className="inputsucces";
     small.innerText="";
    }
-   
+   function select(select){
+    let elemenpadre= select.parentElement;
+    let small= elemenpadre.querySelector("small");
+    elemenpadre.classList.remove("inputerror")
+    elemenpadre.className="inputerror";  
+    small.innerText="";
+   }
