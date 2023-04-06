@@ -17,7 +17,7 @@ function checkedinput(){
     let nuevoname= nombre.value.trim();
     let nuevosurname= surname.value.trim();
     let newpassword= password2.value.trim();
-    let nuevocheck= check.checked;  //asi validamos que un checkbox este seleccionado
+    let nuevocheck= check.checked;  
 
     if(nuevousuario===""){
         setError(usuario,"El campo email no puede quedar vacio");
@@ -44,21 +44,21 @@ function checkedinput(){
     }else{
         succes(password2);
     }
-    if(!nuevocheck){ //aca le decimos que si NO esta chequeado devuelva eso (! significa negar algo)
+    if(!nuevocheck){ 
         setError(check,"Debe aceptar los terminos y condiciones");
     }else{
         succes(check);
     }
-     if(newpassword === nuevopassword){         //validacion extra para ver si son iguales
+     if(newpassword === nuevopassword){         
         succes("")
     }else{
         setError(password2,"las contraseñas no coinciden")
     }
 }
 function setError(input, mensaje){              
- let elemenpadre= input.parentElement;     /*aca pongo input como nombre del parametro, para que luego le pasemos por parametro un input del form y ademas*/ 
- let small= elemenpadre.querySelector("small"); /*tengo que hacer esto para poder ubicarlo abajo, porque si lo dejo con un input*/ 
- elemenpadre.className="inputerror";   /*me desplaza el border bottom*/
+ let elemenpadre= input.parentElement;      
+ let small= elemenpadre.querySelector("small");  
+ elemenpadre.className="inputerror";  
  small.innerText= mensaje;
 }
 function succes(input){

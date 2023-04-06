@@ -216,7 +216,7 @@ padding-bottom: 1%;
 
 /*----------validación-----------*/
 .inputsucces span a{
-    text-decoration: none;    /*esto es para que cuando tenga la clase inputerror los elementos no cambien su estilo*/
+    text-decoration: none;    
     color: #1D84B5;
     margin-left:4px;margin-top: 10%;
 }
@@ -235,11 +235,11 @@ padding-bottom: 1%;
     visibility: visible;
     color: red;
 }
-main form .parent .input{   /*esto es para que el small vaya abajo, el .input es el elemento padre*/
+main form .parent .input{  
     display: block;
 }
  .inputerror span a{
-    text-decoration: none;     /*esto es para que cuando tenga la clase inputerror los elementos no cambien su estilo*/
+    text-decoration: none;     
     color: #1D84B5;
     margin-left:4px;margin-top: 10%;
 }
