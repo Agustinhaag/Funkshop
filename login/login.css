@@ -60,7 +60,9 @@ main h2{
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
 }
-
+main form{
+    margin: 27px;
+}
 main form label{
 display: flex;
 flex-direction: column;
@@ -77,7 +79,7 @@ main form .uno{
     margin-left: 62px;
 }
 main form .container-btn{
-    margin: 20px 0 20px 0;
+    margin: 34px 0 20px 0;
     font-size: 14px;
     color: #1F1F1F;
     display: flex;

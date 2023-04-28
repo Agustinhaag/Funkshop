@@ -57,17 +57,17 @@ function checkedinput(){
     if (cuota.selectedIndex === 0) {
         setError(cuota, "Debe seleccionar una opcion");
        }else{
-      select(cuota);
+      succes(cuota);
      }
      if (licencia.selectedIndex === 0) {
          setError(licencia, "Debe seleccionar una licencia");
      }else{
-       select(licencia);
+       succes(licencia);
      }
      if (categoria.selectedIndex === 0) {
          setError(categoria, "Debe seleccionar una categoría");
      }else{
-       select(categoria);
+       succes(categoria);
      }
 }
 
@@ -81,12 +81,6 @@ function setError(input, mensaje){
     let elemenpadre= input.parentElement;
     let small= elemenpadre.querySelector("small");
     small.innerText="";
-   }
-   function select(select){
-    let elemenpadre= select.parentElement;
-    let small= elemenpadre.querySelector("small");
-    elemenpadre.classList.remove("inputerror")
-    elemenpadre.className="inputerror";  
-    small.innerText="";
+    form.submit();
    }
    

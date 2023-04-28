@@ -66,4 +66,5 @@ function succes(input){
  let small= elemenpadre.querySelector("small");
  elemenpadre.className="inputsucces";
  small.innerText="";
+ form.submit();
 }

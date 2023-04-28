@@ -80,7 +80,7 @@ margin-right: 20px;
 }
 main .contenedor .grupo1 select{
     width: 64%;
-    height: 140%;
+    padding: 6px 0;
     outline: none;
 }
 main .contenedor-input{
@@ -151,7 +151,7 @@ main .contenedor-span .grupo4 span{
     font-weight: 600;
 }
 main .contenedor-span .grupo4 select{
-height: 140%;
+padding: 6px 0;
 width: 60%;
 outline: none;
 max-height: 32px;

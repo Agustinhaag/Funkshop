@@ -15,10 +15,18 @@ body{
 }
 /* ------------------HEADER----------------*/
 nav{
+    width: 100%;
     display: flex;
     background: #30343F;
     height: 15vh;
+   position: fixed;
+   z-index: 500;
+   top: 0;
    justify-content: space-between;
+   transition: all 0.5s ease;
+}
+.scroll{
+    background: rgba(48, 52, 63, 0.674);
 }
 nav .img-nav{
     width: 50%;
@@ -57,9 +65,15 @@ nav .img-nav img{
 .container-menu a:hover{
     text-decoration:underline 2px white;
     text-underline-offset: 5px;
+    font-size: 17px;
+    transition: 1s;
 }
 /*-------------------main-------------------*/
+main{
+    width: 100%;
+}
 .banner{
+    margin-top: 15vh;
     background-image: url(../img/funkos-banner.webp);
     height: 60vh;
    padding:0% 0% 0% 8%;
@@ -91,6 +105,7 @@ nav .img-nav img{
 .containerbanner p{
     color: rgba(226, 227, 228, 0.876);
     padding-bottom: 3%;
+    font-size: 18px;
     font-family: 'Raleway', sans-serif;
 }
 .containerbanner button{
@@ -228,7 +243,7 @@ position: relative;
     width: 30px;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    z-index: 500;
+    z-index: 400;
     transition: .2s;
 }
 .catalogo .container-carrusel .flecha-izq{
@@ -240,12 +255,15 @@ position: relative;
 
 /*-------------------footer-------------------*/
 footer{
-    height: 43vh;
+    height: 33vh;
+    bottom: 0;
+    position: relative;
     background:#30343F ;
 }
 footer .container{
     display: flex;
     width: 100%;
+    height: 100%;
 }
 footer .container-footer{
     width: 50%;
@@ -257,7 +275,7 @@ footer .container-footer a{
     color: white;
     text-decoration: none;
     display: block;
-   padding-bottom: 3%;
+   padding-bottom: 5%;
 }
 footer .container-img-footer{
     display: flex;
@@ -286,6 +304,7 @@ padding-bottom: 1%;
   
     nav .img-nav img{
         width: 170px;
+        top: 10px;
     }
     .container-menu{
         position: fixed; 
@@ -310,7 +329,7 @@ padding-bottom: 1%;
     .container-menu.visible{
         visibility: visible;
         opacity: 1;
-        transition: 0.6s;
+        transition: 0.3s;
     }
     .container-menu .icon{
         display: none;
@@ -324,11 +343,22 @@ padding-bottom: 1%;
     .mostrar{
         position: relative;
         right: 10px;
-        top: 20px;
+        top: 35px;
     }
     .containerbanner button{
         width: 20%;
         font-size: 12px;
+    }
+    .banner{
+        max-height: 50vh;
+    }
+    .banner::before{
+        content: '';
+        background: rgba(37, 37, 37, 0.459);
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        left: 0;
     }
     .section,.catalogo{
         height: 100%;

@@ -11,7 +11,12 @@ ocultar.addEventListener("click",()=>{
 
 enlaces.forEach(enlace=> {
     enlace.addEventListener("click",()=>{
-  menu.classList.remove("visible");
+  menu.classList.remove("visible")
    });
 
+})
+
+const main = document.getElementById("nav");
+window.addEventListener("scroll", function(){
+  main.classList.toggle("scroll", window.scrollY>440);
 })

@@ -51,7 +51,7 @@ nav .img-nav img{
 main{
     height: 70%;
     display: block;
-    width: 100%;
+    max-width: 950px;
 }
 main h1{
     font-family: 'Raleway', sans-serif;
@@ -79,7 +79,7 @@ main .contenedor .grupo1 .parent{
 main .contenedor .grupo1 select{
     width: 63%;
     outline: none;
-    height: 140%;
+   padding: 6px 0;
 }
 main .contenedor-input{
     margin-bottom:2% ;
@@ -146,7 +146,7 @@ main .contenedor-span .grupo4 {
     width: 70%;
 }
 main .contenedor-span .grupo4 select{
-height: 140%;
+padding: 6px 0 ;
 width: 60%;
 outline: none;
 max-height: 35px;

@@ -26,3 +26,8 @@ enlaces.forEach(enlace=> {
    });
 
 })
+
+const main = document.getElementById("nav");
+window.addEventListener("scroll", function(){
+  main.classList.toggle("scroll", window.scrollY>0);
+})
