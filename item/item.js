@@ -20,6 +20,7 @@ let ocultar = document.getElementById("ocultar");
 let enlaces= document.querySelectorAll('.container-menu a[href^="#"]');
 mostrar.addEventListener("click",()=>{
  menu.classList.add("visible");
+ menu.style.transition = "0.6s";
 })
 ocultar.addEventListener("click",()=>{
     menu.classList.remove("visible");
@@ -27,7 +28,7 @@ ocultar.addEventListener("click",()=>{
 
 enlaces.forEach(enlace=> {
     enlace.addEventListener("click",()=>{
-  menu.classList.remove("visible");
+  menu.classList.toggle("visible");
    });
 
 })
