@@ -11,7 +11,6 @@ function restar (){
     cantidad.value= contador;
    if(cantidad.value<0){
     contador=0;
-    cantidad.value=0;
    }
 }
 let menu = document.getElementById("menu");
@@ -36,3 +35,6 @@ const main = document.getElementById("nav");
 window.addEventListener("scroll", function(){
   main.classList.toggle("scroll", window.scrollY>0);
 })
+
+
+

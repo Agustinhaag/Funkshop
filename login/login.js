@@ -9,16 +9,22 @@ form.addEventListener("submit", e =>{
 
 function checkedinput(){ 
     let nuevousuario= usuario.value.trim();
-    let nuevopassword= password.value.trim();
+    let nuevopassword = password.value.trim();
+    let valido = true;
     if(nuevousuario===""){
-        setError(usuario,"El campo email no puede quedar vacio");
+        setError(usuario, "El campo email no puede quedar vacio");
+        valido = false
     }else{ 
         succes(usuario);  
     }  
     if(nuevopassword===""){
-        setError(password,"El campo password no puede quedar vacio");
+        setError(password, "El campo password no puede quedar vacio");
+        valido= false
     }else{
         succes(password);
+    }
+    if (valido) {
+         form.submit();
     }
 }
 function setError(div, mensaje){              
@@ -32,5 +38,4 @@ function succes(input){
  let small= elemenpadre.querySelector("small");
  elemenpadre.className="inputsucces";
  small.innerText="";
- form.submit();
 }

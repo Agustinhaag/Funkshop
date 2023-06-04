@@ -22,51 +22,63 @@ function checkedinput(){
     let nuevoprecio= precio.value.trim();
     let nuevostock= stock.value.trim();
     let nuevodescuento= descuento.value.trim();
-
+    let valido = true;
     if(nuevoname===""){
-        setError(nombre,"El campo nombre no puede quedar vacio");
+        setError(nombre, "El campo nombre no puede quedar vacio");
+        valido = false;
     }else{
         succes(nombre);
     }
     if(nuevadescripcion===""){
-        setError(descripcion,"Debe ingresar una descripción");
+        setError(descripcion, "Debe ingresar una descripción");
+        valido = false;
     }else{
         succes(descripcion);
     }
     if(nuevosku===""){
-        setError(sku,"Ingrese un sku");
+        setError(sku, "Ingrese un sku");
+        valido = false;
     }else{
         succes(sku);
     }
     if(nuevoprecio===""){
-        setError(precio,"Ingrese el precio");
+        setError(precio, "Ingrese el precio");
+        valido = false;
     }else{
         succes(precio);
     }
     if(nuevostock===""){
-        setError(stock,"Ingrese el stock");
+        setError(stock, "Ingrese el stock");
+        valido = false;
     }else{
         succes(stock);
     }
     if(nuevodescuento===""){
-        setError(descuento,"Ingrese el descuento");
+        setError(descuento, "Ingrese el descuento");
+        valido = false;
     }else{
         succes(descuento);
     }
     if (cuota.selectedIndex === 0) {
-       setError(cuota, "Debe seleccionar una opcion");
+        setError(cuota, "Debe seleccionar una opcion");
+        valido = false;
       }else{
      succes(cuota);
     }
     if (licencia.selectedIndex === 0) {
         setError(licencia, "Debe seleccionar una licencia");
+        valido = false;
     }else{
       succes(licencia);
     }
     if (categoria.selectedIndex === 0) {
         setError(categoria, "Debe seleccionar una categoría");
+        valido = false;
     }else{
       succes(categoria);
+    }
+    if (valido) {
+        form.submit();
     }
 }
 
@@ -80,6 +92,5 @@ function setError(input, mensaje){
     let elemenpadre= input.parentElement;
     let small= elemenpadre.querySelector("small");
     small.innerText="";
-    form.submit();
    }
  

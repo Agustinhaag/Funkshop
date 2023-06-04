@@ -18,41 +18,49 @@ function checkedinput(){
     let nuevosurname= surname.value.trim();
     let newpassword= password2.value.trim();
     let nuevocheck= check.checked;  
-
+    let valido = true;
     if(nuevousuario===""){
-        setError(usuario,"El campo email no puede quedar vacio");
+        setError(usuario, "El campo email no puede quedar vacio");
+        valido = false
     }else{ 
         succes(usuario);  
     }  
     if(nuevopassword===""){
-        setError(password,"El campo password no puede quedar vacio");
+        setError(password, "El campo password no puede quedar vacio");
+        valido = false;
     }else{
         succes(password);
     }
     if(nuevoname===""){
-        setError(nombre,"El campo nombre no puede quedar vacio");
+        setError(nombre, "El campo nombre no puede quedar vacio");
+        valido = false;
     }else{
         succes(nombre);
     }
     if(nuevosurname===""){
-        setError(surname,"El campo apellido no puede quedar vacio");
+        setError(surname, "El campo apellido no puede quedar vacio");
+        valido = false;
     }else{
         succes(surname);
     }
     if(newpassword===""){
-        setError(password2,"Debe repetir su contraseña");
+        setError(password2, "Debe repetir su contraseña");
+        valido = false;
     }else{
         succes(password2);
     }
     if(!nuevocheck){ 
-        setError(check,"Debe aceptar los terminos y condiciones");
+        setError(check, "Debe aceptar los terminos y condiciones");
+        valido = false;
     }else{
         succes(check);
     }
-     if(newpassword === nuevopassword){         
-        succes("")
-    }else{
-        setError(password2,"las contraseñas no coinciden")
+     if(newpassword !== nuevopassword){         
+        setError(password2, "las contraseñas no coinciden")
+        valido = false; 
+    }
+    if (valido) {
+       form.submit(); 
     }
 }
 function setError(input, mensaje){              
@@ -66,5 +74,4 @@ function succes(input){
  let small= elemenpadre.querySelector("small");
  elemenpadre.className="inputsucces";
  small.innerText="";
- form.submit();
 }
