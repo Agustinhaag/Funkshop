@@ -22,5 +22,40 @@ window.addEventListener("scroll", function(){
   main.classList.toggle("scroll", window.scrollY>440);
 })
 
+let fila = document.querySelector(".contenedor-proyecto");
+let carrusel = document.querySelectorAll(".carrusel");
+let derecha = document.getElementById("flecha-derecha");
+let izquierda = document.getElementById("flecha-izquierda");
 
+derecha.addEventListener("click", () => {
+  fila.scrollLeft += fila.offsetWidth;
+  let indicadoractivo = document.querySelector(".indicadores .activo");
+  if (indicadoractivo && indicadoractivo.nextElementSibling) {
+    indicadoractivo.nextElementSibling.classList.add("activo");
+    indicadoractivo.classList.remove("activo");
+  }
+});
+
+izquierda.addEventListener("click", () => {
+  fila.scrollLeft -= fila.offsetWidth;
+  let indicadoractivo = document.querySelector(".indicadores .activo");
+  if (indicadoractivo && indicadoractivo.previousElementSibling) {
+    indicadoractivo.previousElementSibling.classList.add("activo");
+    indicadoractivo.classList.remove("activo");
+  }
+});
+
+const numpag = Math.ceil(carrusel.length / 3);
+for (let i = 0; i < numpag; i++) {
+  const indicador = document.createElement("button");
+  if (i === 0) {
+    indicador.classList.add("activo");
+  }
+  document.querySelector(".indicadores").appendChild(indicador);
+  indicador.addEventListener("click", (e) => {
+    fila.scrollLeft = i * fila.offsetWidth;
+    document.querySelector(".indicadores .activo").classList.remove("activo");
+    e.target.classList.add("activo");
+  });
+}
 
