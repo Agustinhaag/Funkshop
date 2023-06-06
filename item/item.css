@@ -33,7 +33,9 @@ nav{
 }
 nav .img-nav{
     width: 50%;
-    padding:1% 0 1% 8%;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
 }
 nav .img-nav img{
     width: 250px;
@@ -53,7 +55,8 @@ nav .img-nav img{
   justify-content: right;
   width: 50%;
   text-align: center;
-  padding: 2% 4% 0% 0%;
+ padding-right: 15px;
+ align-items: center;
 }
 .container-menu a{
     padding-left: 9% ;
@@ -319,7 +322,6 @@ padding-bottom: 1%;
   
     nav .img-nav img{
         width: 170px;
-        top: 10px;
     }
     .container-menu{
         position: fixed; 

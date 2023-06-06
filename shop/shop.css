@@ -23,7 +23,7 @@ nav{
     font-family: 'Raleway', sans-serif;
     display: flex;
     background: #30343F;
-    height: 15vh;
+    height: 13vh;
    justify-content: space-between;
    transition: all 0.5s ease;
 }
@@ -32,7 +32,9 @@ background: rgba(48, 52, 63, 0.674);
 }
 nav .img-nav{
     width: 50%;
-    padding:27px 0% 1% 8%;
+    padding-left: 15px;
+    align-items: center;
+    display: flex;
 }
 nav .img-nav img{
     width: 250px;
@@ -48,7 +50,8 @@ nav .img-nav img{
   justify-content: right;
   width: 50%;
   text-align: center;
-  padding: 39px 4% 0% 0%;
+ align-items: center;
+ padding-right: 15px;
 }
 .container-menu a{
     padding-left: 9% ;
@@ -100,7 +103,7 @@ main .form form .select{
 main .form form .container-input .minmax{
     display: inline-block;
     font-size: 10px;
-    min-width: 144px;
+
 }
 main .form form .container-input .minmax input{
     width: 20%;
@@ -249,18 +252,14 @@ background-color:rgb(49, 49, 60) ;
 padding-bottom: 1%;
 }
 
-
-
 @media(max-width:768px) {
     .mostrar, .ocultar{
         display: block; 
         color: white;  
         font-size: 25px; 
     }
-  
     nav .img-nav img{
         width: 170px;
-        top: 10px;
     }
     .container-menu{
         position: fixed; 
@@ -293,12 +292,13 @@ padding-bottom: 1%;
         position: absolute;
         right: 40px;
         top: 40px;
-        font-size: 35px;
+        font-size: 25px;
     }
     .mostrar{
         position: relative;
         right: 10px;
-        top: 30px;
+        top: 20px;
+        font-size: 20px;
     }
     main .form{
         width: 30%;
